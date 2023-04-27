@@ -1,0 +1,369 @@
+/* Importando fonte Poppins do Google fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ____________________________________________________________________ */
+/* Reset (Básico) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    /* Variáveis no CSS */
+
+    --corPrimaria: #017143; /* Declaração de variável */
+    /* color: var(--corPrimaria);  Chamada da variável */
+
+    --corSecundaria: #333; /* Declaração de variável */
+    /* color: var(--corSecundaria);  Chamada da variável */
+
+    --corTerciaria: #fff; /* Declaração de variável */
+    /* color: var(--corTerciaria);  Chamada da variável */
+}
+
+
+/* ____________________________________________________________________ */
+/* Container (Geral página) */
+
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #fff; */
+    background-color: var(--corTerciaria);
+}
+
+/* ____________________________________________________________________ */
+/* Header (Cabeçalho) */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px; /* O padding de 100px que determina o respiro lateral */
+    display: flex; /* Flexbox para organizar o Header */
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+header .logo:hover {
+    filter: invert(0.1);
+}
+
+header ul {
+    position: relative;
+    display: flex; /* Põe os links em linha (Menu) */
+}
+
+header ul li {
+    list-style: none; /* Remove o estilo da lista (bolinha) */
+}
+
+header ul li a {
+    display: inline-block; /* Garante que o elemento seja renderizado em linha dentro do bloco */
+    /* color: #333; */
+    color: var(--corSecundaria);
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 40px; /* Espaça os links entre si */
+    text-decoration: none; /* Remove o underline */
+    padding: 5px;
+}
+header ul li a:hover {
+    /* background-color: #017143; */
+    background-color: var(--corPrimaria);
+    /* color: #fff; */
+    color: var(--corTerciaria);
+    border-radius: 10px;
+
+}
+
+/* ____________________________________________________________________ */
+/* Conteúdo */
+
+.conteudo {
+    position: relative;
+    width: 100%;
+    display: flex; /* Torna flexível o container do texto (.conteudo) */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conteudo .textoPrincipal {
+    position: relative;
+    max-width: 600px; /* Limita a área do texto principal */
+
+}
+
+.conteudo .textoPrincipal h2 {
+    /* color: #333; */
+    color: var(--corSecundaria);
+    font-size: 2.5em; /* 1em = 1vez tamanho da fonte do elemento (16px * 2.5) = 40px */
+    line-height: 1.5em; /* Espaçamento vertical fonte (40px * 1.5) = 60px */
+    font-weight: 500;
+
+}
+
+/* Destaque da palavra Starbucks */
+.conteudo .textoPrincipal h2 span {
+    /* color: #017143; */
+    color: var(--corPrimaria);
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.conteudo .textoPrincipal p {
+    /* color: #333; */
+    color: var(--corSecundaria);
+
+}
+
+/* Botão */
+.conteudo .textoPrincipal a {
+    display: inline-block;
+    margin-top: 20px; /* Afastamento do parágrafo acima */
+    padding: 8px 20px;
+    /* background: #017143; */
+    background: var(--corPrimaria);
+    /* color: #fff; */
+    color: var(--corTerciaria);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    text-decoration: none;
+
+}
+.conteudo .textoPrincipal a:hover {
+    /* background: #333; */
+    background: var(--corSecundaria);
+    /* color: #fff; */
+    color: var(--corTerciaria);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    text-decoration: none;
+
+}
+
+/* Imagem sorvete */
+.conteudo .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+
+}
+
+.conteudo .imgBox img {
+    max-width: 340px;
+}
+
+/* Imagem dos sorvetes pequenos abaixo */
+.sorvetes {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.sorvetes li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.sorvetes li:hover {
+    transform: translateY(-15px);
+
+}
+
+.sorvetes li img {
+    max-width: 60px;
+
+}
+
+/* Imagem das redes sociais */
+
+.sociais {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.sociais li {
+    list-style: none;
+
+}
+
+.sociais li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6); /* Reduz o tamanho dos ícones */
+    filter: invert(1); /* Inverte a cor para branco */
+
+}
+.sociais li a:hover {
+    /* color: #333; */
+    color: var(--corSecundaria);
+    filter: invert(0);
+
+}
+
+/* ____________________________________________________________________ */
+/* Círculo */
+
+.circulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #017143; */
+    background: var(--corPrimaria);
+
+
+    /* https://bennettfeely.com/clippy/ */
+    /* https://www.w3schools.com/cssref/css3_pr_clip-path.php */
+
+    /* Tamanho -> Lado -> posição */
+    clip-path: circle(600px at right 800px);
+
+    }
+
+/* ____________________________________________________________________ */
+/* Responsividade */
+
+/* https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/* Abaixo de 992px */
+@media (max-width: 992px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header .logo {
+        max-width: 60px; /* Era 80px agora vira 60px (Reduz) */
+    }
+
+    header ul {
+        display: none; /* Esconde o menu abaixo de 992px */
+    }
+
+    /* Menu hamburguer */
+    .toggle {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background: url(assets/menu.png); /* Imagem do hamburguer */
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }
+
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        background: url(assets/close.png); /* Imagem do X (Fechar) */
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    /* Menu hamburguer ativado (Forma a lista) */
+    header ul.links.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%; /* Largura da lista do hamburguer quando ativo */
+        height: 45%; /* Altura da lista do hamburguer quando ativo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f2f2f2;
+        z-index: 10;
+    }
+
+    header ul li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    /* ___________________________________________ */
+    /* Neste ponto fazer JS (1ª função) */
+
+
+    /* Conteúdo */
+    main {
+        padding: 20px 20px 120px;
+    }
+
+    .conteudo {
+        flex-direction: column; /* Joga o conteudo em coluna (Blocos) */
+        margin-top: 100px;
+    }
+
+    .conteudo .textoPrincipal h2 {
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }    
+    .conteudo .textoPrincipal {
+        max-width: 100%;
+    }    
+    .conteudo .imgBox {
+        max-width: 300px;
+
+    }    
+    .thumb li img {
+        max-width: 40px;
+    }
+    .circulo {
+        clip-path: circle(400px at center bottom);
+    }
+    .sociais {
+        /* Estiliza os sociais */
+        /* background: #017143; */
+        background: var(--corPrimaria);
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    /* Fazer o restante do JS (2ª e 3ª funções) */
+
+
+}
